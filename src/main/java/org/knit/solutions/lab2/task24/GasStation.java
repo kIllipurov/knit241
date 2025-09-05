@@ -1,4 +1,4 @@
-package org.knit.solutions.lab2;
+package org.knit.solutions.lab2.task24;
 
 public class GasStation {
     private int availablePumps = 2;

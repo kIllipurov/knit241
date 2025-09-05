@@ -1,8 +1,8 @@
 package org.knit.solutions;
 
 import org.knit.TaskDescription;
-import org.knit.solutions.lab2.Car;
-import org.knit.solutions.lab2.GasStation;
+import org.knit.solutions.lab2.task24.Car;
+import org.knit.solutions.lab2.task24.GasStation;
 
 @TaskDescription(taskNumber = 224, taskDescription = "2.4 Автозаправочная станция (wait/notify)")
 public class Task224 implements Solution {
