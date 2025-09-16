@@ -1,0 +1,38 @@
+package org.knit.solutions.task618;
+
+public class DuplicateZeros {
+
+    /**
+     * Дублирует каждый ноль в массиве, сдвигая элементы вправо.
+     * Элементы, выходящие за границы массива, отбрасываются.
+     *
+     * @param arr Входной массив (изменяется на месте)
+     */
+    public static void duplicateZeros(int[] arr) {
+        int possibleDups = 0;
+        int length = arr.length - 1;
+
+        for (int left = 0; left <= length - possibleDups; left++) {
+            if (arr[left] == 0) {
+                if (left == length - possibleDups) {
+                    arr[length] = 0;
+                    length--;
+                    break;
+                }
+                possibleDups++;
+            }
+        }
+
+        int last = length - possibleDups;
+
+        for (int i = last; i >= 0; i--) {
+            if (arr[i] == 0) {
+                arr[i + possibleDups] = 0;
+                possibleDups--;
+                arr[i + possibleDups] = 0;
+            } else {
+                arr[i + possibleDups] = arr[i];
+            }
+        }
+    }
+}
