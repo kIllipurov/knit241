@@ -1,0 +1,1 @@
+model — просто POJO с полями site, login, encryptedPassword.
